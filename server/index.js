@@ -4,8 +4,9 @@ const configureDB=require('./configureDB/db')
 const userRouter = require('./routes/userRoutes')
 const dotenv=require('dotenv')
 const taskRouter = require('./routes/taskRoutes')
+require('dotenv').config();
 const app=express()
-const PORT=3920
+const PORT=process.env.PORT
 app.use(express.json())
 app.use(cors())
 dotenv.config()
